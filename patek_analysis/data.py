@@ -13,9 +13,10 @@ def get_patek_data():
     
     # 2. Define Query 
     # Project: projectbdm-487109 | Dataset: patek_data | Table: patek
+    # we Point back to the Main Production Table (which now has price_EUR!)
     query = """
     SELECT *
-    FROM `projectbdm-487109.patek_data.patek_raw`
+    FROM `projectbdm-487109.patek_data.patek`
     """
     
     # 3. Run Query

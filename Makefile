@@ -4,7 +4,8 @@ install:
 
 # case 1: "Run the full pipeline"
 # Fetches data -> Updates FX -> Trains Model -> Cleans up
-pipeline: data fx model
+# we want the local CSV to contain the price_EUR column, we need to run the fx step before the data step in your Makefile
+pipeline: fx data model
 	@echo "🚀 Full pipeline complete. Check your CSV files."
 
 data:
