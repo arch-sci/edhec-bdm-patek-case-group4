@@ -1,12 +1,11 @@
 # Base Image
-FROM python:3.11-slim
-
-
-# Setup
-WORKDIR /app
+FROM python:3.12-slim
 
 # Install system dependencies (make)
 RUN apt-get update && apt-get install -y make
+
+# Setup
+WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt

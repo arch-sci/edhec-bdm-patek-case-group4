@@ -13,10 +13,9 @@ def get_patek_data():
     
     # 2. Define Query 
     # Project: projectbdm-487109 | Dataset: patek_data | Table: patek
-    # we Point back to the Main Production Table (which now has price_EUR!)
     query = """
     SELECT *
-    FROM `projectbdm-487109.patek_data.patek`
+    FROM `projectbdm-487109.patek_data.patek_raw`
     """
     
     # 3. Run Query
@@ -40,10 +39,10 @@ def get_patek_data():
     output_dir = "data"
     os.makedirs(output_dir, exist_ok=True)
     # Save the csv to data/ folder
-    output_file = os.path.join(output_dir, "patek_philippe_data.csv")
+    output_file = os.path.join(output_dir, "patek_philippe_data_cleaned.csv")
     df.to_csv(output_file, index=False)
 
-    
+
     print(f"✅ Success! Data saved to {output_file}")
     return df
 
