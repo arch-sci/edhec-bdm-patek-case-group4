@@ -9,6 +9,6 @@ data:
 model:
 	@python -m patek_analysis.model
 
-# Runs the API extraction
+# Runs the API extraction 
 fx:
 	@python -m patek_analysis.fx_rates
