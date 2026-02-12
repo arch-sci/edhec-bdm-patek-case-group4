@@ -3,3 +3,5 @@ google-cloud-bigquery
 db-dtypes
 ipykernel
 scikit-learn
+requests
+pyarrow
